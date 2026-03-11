@@ -1,7 +1,17 @@
 class Palindrome {
-    static void main() {
-        System.out.println("welcome to palindrome checker app");
-        System.out.println("version 1.0");
-        System.out.println("system initiaziled successfully ");
+    public static void main(String[] args) {
+
+        String input = "madan";
+        boolean isPalindrome = true;
+
+        for (int i = 0; i < input.length() / 2; i++) {
+            if (input.charAt(i) != input.charAt(input.length() - 1 - i)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        System.out.println("Input text: " + input);
+        System.out.println("Is it a Palindrome? : " + isPalindrome);
     }
 }
